@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "lib": ["dom", "esnext"],
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -10,11 +11,20 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "react",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      },
+      {
+        "name": "typescript-lit-html-plugin"
+      }
+    ]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
