@@ -6,6 +6,8 @@ declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: 'development' | 'production' | 'test';
     PUBLIC_URL: string;
+    GENERATE_SOURCEMAP: 'true' | 'false';
+    INLINE_RUNTIME_CHUNK: 'true' | 'false';
   }
 }
 

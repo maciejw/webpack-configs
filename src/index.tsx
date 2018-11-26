@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.global.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import('./webcomponents-registration');
+import './webcomponents-registration';
 
 const root = document.getElementById('root');
 

@@ -5,6 +5,7 @@ const proxyConfig = {
   '/api': {
     target: 'https://api.github.com/',
     secure: false,
+    changeOrigin: true,
     pathRewrite: {
       '^/api': '',
     },

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import styles from './App.css';
+
 import { hot } from 'react-hot-loader';
 
 import { Elements } from './Elements';
@@ -20,12 +21,7 @@ export class App extends Component<unknown, AppState> {
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           {show && <Elements />}
-          <a
-            className={styles.appLink}
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className={styles.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
           <label>
@@ -43,4 +39,4 @@ export class App extends Component<unknown, AppState> {
   }
 }
 
-export default hot(module)(App);
+export default (process.env.NODE_ENV === 'development' ? hot(module)(App) : App);

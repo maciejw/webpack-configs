@@ -3,6 +3,7 @@
   "extends": ["tslint:recommended", "tslint-react"],
   "jsRules": {},
   "rules": {
+    "class-name": true,
     "quotemark": false,
     "ordered-imports": false,
     "no-namespace": false,
@@ -16,5 +17,8 @@
     "jsx-no-lambda": false,
     "no-shadowed-variable": false
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": ["src/**/*.json", "src/**/*.test.ts?"]
+  }
 }

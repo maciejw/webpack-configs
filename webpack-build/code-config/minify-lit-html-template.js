@@ -1,4 +1,8 @@
-module.exports = function minifyLitHtmlTemplate(source) {
+'use strict';
+//@ts-check
+
+/** @type {(source: string) => string} */
+function minifyLitHtmlTemplate(source) {
   const uglifyTemplateString = string =>
     string
       .replace(/(\r\n|\n|\r)/g, '')
@@ -8,6 +12,8 @@ module.exports = function minifyLitHtmlTemplate(source) {
       .replace(/\s{2,}/g, ' ');
 
   return source.replace(/(?:(?:=)|(?:=>)|(?:return html))(?:\s*\()?\s*`([\d|\D]*?)`/g, (match, $1) =>
-    match.replace($1, uglifyTemplateString($1))
+    match.replace($1, uglifyTemplateString($1)),
   );
-};
+}
+
+module.exports = minifyLitHtmlTemplate;
